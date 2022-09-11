@@ -1,0 +1,54 @@
+服务器核心fabfic
+版本1.19.2
+
+[01:58:11] [Network Listener - #1/INFO]: /221.*:28836 尝试连接!
+[01:58:11] [Network Listener - #6/INFO]: 玩家以 ScrappyHat59887 的用户名建立了连接
+[01:58:11] [nioEventLoopGroup-4-4/INFO]: ScrappyHat59887 (以 ScrappyHat59887 登入) 连接到了远端Java服务器，地址为 192.168.5.217
+[01:58:12] [pool-2-thread-4/INFO]: Floodgate player who is logged in as BE_ScrappyHat598 00000000-0000-0000-0009-01f7d2eafc02 joined
+[01:58:12] [Server thread/ERROR]: Couldn't place player in world
+java.lang.RuntimeException: Mixin transformation of net.minecraft.class_2985 failed
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:419) ~[fabric-loader-0.14.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:323) ~[fabric-loader-0.14.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218) ~[fabric-loader-0.14.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:145) ~[fabric-loader-0.14.9.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at net.minecraft.class_3324.method_14578(class_3324.java:872) ~[server-intermediary.jar:?]
+	at net.minecraft.class_3222.<init>(class_3222.java:261) ~[server-intermediary.jar:?]
+	at net.minecraft.class_3324.method_14613(class_3324.java:461) ~[server-intermediary.jar:?]
+	at net.minecraft.class_3248.method_14384(class_3248.java:133) ~[server-intermediary.jar:?]
+	at net.minecraft.class_3248.redirect$znm000$handlePlayerJoin(class_3248.java:563) ~[server-intermediary.jar:?]
+	at net.minecraft.class_3248.method_18784(class_3248.java:73) ~[server-intermediary.jar:?]
+	at net.minecraft.class_2535.method_10754(class_2535.java:248) ~[server-intermediary.jar:?]
+	at net.minecraft.class_3242.method_14357(class_3242.java:183) ~[server-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.method_3813(MinecraftServer.java:886) ~[server-intermediary.jar:?]
+	at net.minecraft.class_3176.method_3813(class_3176.java:289) ~[server-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.method_3748(MinecraftServer.java:819) ~[server-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.handler$zda000$modifiedRunLoop(MinecraftServer.java:3885) ~[server-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.method_29741(MinecraftServer.java:644) ~[server-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:257) ~[server-intermediary.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:234) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:414) ~[fabric-loader-0.14.9.jar:?]
+	... 19 more
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Critical injection failure: Callback method PlayerAdvancements_award(Lnet/minecraft/class_161;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V in botapi.mixins.json:PlayerAdvancementsMixin from mod botapi failed injection check, (0/1) succeeded. Scanned 1 target(s). Using refmap Bot-Connect-fabric-refmap.json
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.postInject(InjectionInfo.java:468) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.applyInjections(MixinTargetContext.java:1385) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyInjections(MixinApplicatorStandard.java:1052) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:400) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:325) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:421) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:403) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:234) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202) ~[sponge-mixin-0.11.4+mixin.0.8.5.jar:0.11.4+mixin.0.8.5]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:414) ~[fabric-loader-0.14.9.jar:?]
+	... 19 more
+[01:58:12] [Netty Server IO #1/INFO]: Floodgate 玩家 BE_ScrappyHat598 已断开连接
+[01:58:12] [nioEventLoopGroup-4-4/INFO]: ScrappyHat59887 因 无效的玩家数据 从远程Java服务器 192.168.5.217 断开
+[01:58:12] [Server thread/INFO]: com.mojang.authlib.GameProfile@1dd32bfe[id=00000000-0000-0000-0009-01f7d2eafc02,name=BE_ScrappyHat598,properties={},legacy=false] (/221.*:56466) lost connection: Invalid player data
+[01:58:12] [Server thread/WARN]: handleDisconnection() called twice
+[01:58:13] [WebSocketConnectReadThread-103/INFO]: Got a message from skin uploader: received a skin with invalid geometry: the image width and height doesn't match the geometry data width and height
+[01:58:13] [WebSocketConnectReadThread-78/INFO]: Got a message from skin uploader: received a skin with invalid geometry: the image width and height doesn't match the geometry data width and height
